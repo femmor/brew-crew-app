@@ -31,6 +31,7 @@ class _SignInState extends State<SignIn> {
             if(result == null) {
               print("error signing in");
             } else {
+//              Listen for the authentication change and show the homepage
               print("user signed in");
               print(result.uid);
             }

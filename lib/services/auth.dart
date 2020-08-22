@@ -11,11 +11,18 @@ class AuthService {
   }
 
 
+//  auth change user stream
+  Stream<AppUser> get user {
+    return _auth.authStateChanges()
+//      .map((User user) => _userFromFirebaseUser(user));
+        .map(_userFromFirebaseUser);
+  }
+
 //  sign in as anonymous
   Future signInAnon() async {
     try {
       UserCredential result = await _auth.signInAnonymously();
-      // ignore: deprecated_member_use
+
       User user = result.user;
       return _userFromFirebaseUser(user);
     } catch(e) {
@@ -31,6 +38,5 @@ class AuthService {
 
 
 //  sign out
-
 
 }
