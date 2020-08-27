@@ -112,7 +112,7 @@ class _RegisterState extends State<Register> {
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
                 ),
-              )
+              ),
             ],
           ),
         ),
