@@ -7,6 +7,7 @@ class DatabaseService {
 //  collection reference
   final CollectionReference brewCollection =
       FirebaseFirestore.instance.collection("brews");
+
   Future updateUserData(
     String name,
     String sugars,
@@ -17,5 +18,10 @@ class DatabaseService {
       "sugars": sugars,
       "strength": strength,
     });
+  }
+
+  // Get brews Stream
+  Stream<QuerySnapshot> get brews {
+    return brewCollection.snapshots();
   }
 }
