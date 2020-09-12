@@ -56,6 +56,13 @@ class _SettingsFormState extends State<SettingsForm> {
               });
             },
           ),
+          SizedBox(
+            height: 15,
+          ),
+          Text(
+            "Coffee strength",
+            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+          ),
           Slider(
               activeColor: Colors.brown[_currentStrength ?? 100],
               inactiveColor: Colors.brown[_currentStrength ?? 100],
