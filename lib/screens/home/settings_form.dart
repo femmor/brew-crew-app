@@ -56,6 +56,18 @@ class _SettingsFormState extends State<SettingsForm> {
               });
             },
           ),
+          Slider(
+              activeColor: Colors.brown[_currentStrength ?? 100],
+              inactiveColor: Colors.brown[_currentStrength ?? 100],
+              min: 100,
+              max: 900,
+              divisions: 8,
+              value: (_currentStrength ?? 100).toDouble(),
+              onChanged: (val) {
+                setState(() {
+                  _currentStrength = val.round();
+                });
+              }),
           //   Slider for strength
           SizedBox(
             height: 20,
