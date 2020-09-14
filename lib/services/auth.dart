@@ -61,7 +61,7 @@ class AuthService {
       // create an instance of the database service
       // pass in the uid from that user that comes back
       // call updateUserDate and pass in the userData for the new user
-      await DatabaseService(uid: user.uid).updateUserData("Emmanuel", "0", 100);
+      await DatabaseService(uid: user.uid).updateUserData("New user", "0", 100);
       // Turn firebase user into user
       return _userFromFirebaseUser(user);
     } catch (e) {
