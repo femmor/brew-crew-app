@@ -2,6 +2,7 @@ import 'package:brew_crew/models/brew.dart';
 import 'package:brew_crew/models/user.dart';
 import "package:cloud_firestore/cloud_firestore.dart";
 import 'package:firebase_auth/firebase_auth.dart';
+import "dart:core";
 
 class DatabaseService {
   final String uid;
@@ -38,9 +39,9 @@ class DatabaseService {
   UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
     return UserData(
       uid: uid,
-      name: snapshot.data["name"],
-      sugars: snapshot.data["sugars"],
-      strength: snapshot.data["strength"],
+      name: snapshot.data()["name"],
+      sugars: snapshot.data()["sugars"],
+      strength: snapshot.data()["strength"],
     );
   }
 
