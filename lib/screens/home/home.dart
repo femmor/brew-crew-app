@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
           title: Text(
-            "Brew Crew",
+            "Coffee Junkies",
             style: TextStyle(
               fontSize: 26.0,
               fontWeight: FontWeight.bold,
